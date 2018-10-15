@@ -1,9 +1,9 @@
 def email():
-	r="16ucs052@lnmiit.ac.in"
+	r="ayugupta99@gmail.com"
 	return r
 
 
 def pwd():
-	a="ayushi1799"
+	a="diamond1010"
 	return a
 

@@ -12,11 +12,14 @@ Keep track of all our favourite seasons and their latest episodes’air time.Thi
 3. Ansible must also be installed (mail is send through ansible)
 
 ### Installing
-Install libraries by running shell script install.sh
+Install libraries by running shell script install.sh,follow steps:
+  1. #chmod +x install.sh
+  2. #./install.sh
 
 
 ## Running the tests
 
+This set of code was tested on Rhel 7.5 OS.
 Download the innovacer_code.py and secret.py.
 Edit secret.py by enetering your email-id and password (senders) also your mysql connector password.
 
@@ -51,8 +54,11 @@ Ansible is a radically simple IT automation engine that automates cloud provisio
     ```
 
 ## Deployment
-1. A database is maintained of all the input email-id and corresponding tv_series
+1. A database is maintained of all the input email-id and corresponding tv_series.
 
+
+2. Mail is sent through ansible playbook to each user stating satus of each tv-series.
+![alt text](https://github.com/ayu-gupta/IMDb-Scrapper/blob/master/mail%20ss.jpg)
 
 ## Built With
 
@@ -60,9 +66,6 @@ Ansible is a radically simple IT automation engine that automates cloud provisio
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 

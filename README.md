@@ -5,53 +5,54 @@ Keep track of all our favourite seasons and their latest episodes’air time.Thi
   2. Only year is mentioned for next season.
   3. All the seasons are finished and no further details are available.
 
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-1. Python36 must be preinstalled
+1. Python36 and pip must be preinstalled
 2. Mysql,mysql.connector must be preinstalled.
-3. BeautifulSoup,IMDbpy should also be available.
-4. Ansible must also be installed (mail is send through ansible)
+3. Ansible must also be installed (mail is send through ansible)
 
 ### Installing
-
-In Rhel 7.5 OS:
-1. Install Mysql 
-
-
+Install libraries by running shell script install.sh
 
 
 ## Running the tests
 
 Download the innovacer_code.py and secret.py.
-Edit secret.py by enetering your email-id and password 
+Edit secret.py by enetering your email-id and password (senders) also your mysql connector password.
+
 After downloading run following command in the same directory where you have downloaded it.
   #python36 innovacer_code.py
 
+## What is Ansible
+Ansible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.Designed for multi-tier deployments since day one, Ansible models your IT infrastructure by describing how all of your systems inter-relate, rather than just managing one system at a time.It uses no agents and no additional custom security infrastructure, so it's easy to deploy - and most importantly, it uses a very simple language (YAML, in the form of Ansible Playbooks) that allow you to describe your automation jobs in a way that approaches plain English.
 
-### Break down into end to end tests
 
-Explain what these tests test and why
+## Use Cases
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+1. Exact date is mentioned for next episode.
+   ```
+    Example 'Flash'
+    Status:  Next episode airs on <yyyy-mm-dd>
+    ```
+2. Only year is mentioned for next season.
+    ```
+    Example 'game of Thrones'
+    Status: The next season begins in <yyyy>
+    ```
+3. All the seasons are finished and no further details are available.
+    ```
+    Example 'Friends'
+    Status: The show has finished streaming all its episodes.
+    ```
+4. No Information about the next episode's release date is mentioned,so just notify about the latest release date
+    ```
+    Example 'Suits'
+    Status: Latest episode was released on <yyyy-mm-dd>
+    ```
 
 ## Deployment
+1. A database is maintained of all the input email-id and corresponding tv_series
 
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 

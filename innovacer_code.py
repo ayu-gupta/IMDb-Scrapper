@@ -11,7 +11,6 @@ def database():
 
     mycursor.execute("Create database if not exists qt")
     mycursor.execute("Use qt")
-
     mycursor.execute("Create table if not exists input(email varchar(100), tv_series varchar(500))")
 
      
@@ -78,8 +77,15 @@ def scrapper(s):
         Tv series name:{}
         Status:{}\n""".format(x,Status))
 
+    fromemail=secret.email()
+    pwd=secret.pwd()
 
-    fh.write("id: {}".format(email))    
+
+    fh.write("""
+id: {}
+fid: {}
+pwd: {}""".format(email,fromemail,pwd))
+ 
     fh.close()
 
 
@@ -94,9 +100,9 @@ def mail():
        - include_vars: "/ws/mail_output.yml"
        - mail:
            body: "{{var}}"
-           from: 'secret.email()'
-           username: 'secret.email()'
-           password: "secret.pwd()"
+           from: "{{fid}}"
+           username: "{{fid}}"
+           password: "{{pwd}}"
            subject: "Notification for your fav tv series"
            to: '{{id}}'
            host: smtp.gmail.com

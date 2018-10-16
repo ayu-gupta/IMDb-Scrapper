@@ -148,11 +148,16 @@ while True:
     
 
     mycursor.execute("Insert into input_data(email,tv_series) values (%s,%s)",params)
+    conn.commit()
     mycursor.execute("select * from input_data")
     data=mycursor.fetchall()
     a=data[len(data)-1]                          # fetch the last input value from table
-    series_list=a[1].split(',')                  #split the series entered by user by ',' and check status of each series
+    s_list=a[1].split(',')                  #split the series entered by user by ',' and check status of each series
     
+    series_list=[]
+    for j in s_list:
+        series_list.append(j.strip())
+
     fh=open('/mail_variables.yml','w')           # write a yml file for body of mail
     fh.write("body: |")
     

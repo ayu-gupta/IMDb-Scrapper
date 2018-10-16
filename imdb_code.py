@@ -132,7 +132,7 @@ def mail():
 #--------------------------main------------------------------------------------------------    
     
 try:
-    conn=mysql.connector.connect(user='root',password=secret.mysqlpwd(),host='localhost')
+    conn=mysql.connector.connect(user=secret.mysqluser(),password=secret.mysqlpwd(),host='localhost')
 except:
     print("Error in connection to mysql")
 mycursor=conn.cursor()

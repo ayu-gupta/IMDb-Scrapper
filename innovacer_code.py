@@ -67,8 +67,8 @@ def scrapper(series_list):
 
 
         #logic for dividing into usecases
-        if len(airdates[1].split()) == 1:                     #if only year is mentioned in airdate of fisrt episode 
-            Status="The next season begins in {}".format(airdates[1])
+        if len(airdates[0].split()) == 1:                     #if only year is mentioned in airdate of fisrt episode 
+            Status="The next season begins in {}".format(airdates[0])
         else:
             flag=0
             for i in empty_removed_airdates:

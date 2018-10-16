@@ -20,10 +20,10 @@ Install libraries by running shell script install.sh,follow steps:
 ## Running the tests
 
   This set of code was tested on Rhel 7.5 OS.
-  Download the imdb_code.py and secret.py.
-  Edit secret.py by enetering your email-id and password (senders) also your mysql connector password.
+  Download the imdb_code.py and secret.py in same directory. 
+  Edit secret.py by enetering your email-id and password (senders) also your mysql connector password and user 
 
-  After downloading run following command in the same directory where you have downloaded it.
+  After that run following command in the same directory where you have downloaded it.
     #python36 imdb_code.py
 
 ## What is Ansible

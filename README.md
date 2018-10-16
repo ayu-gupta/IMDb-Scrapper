@@ -53,7 +53,7 @@ Ansible is a radically simple IT automation engine that automates cloud provisio
     Status: Latest episode was released on <yyyy-mm-dd>
     ```
 
-## Deployment
+## Demo 
 1. User input email id and tv series seprated by a comma
 ![alt text](https://github.com/ayu-gupta/IMDb-Scrapper/blob/master/input%20prompt.jpg)
 

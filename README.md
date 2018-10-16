@@ -19,12 +19,12 @@ Install libraries by running shell script install.sh,follow steps:
 
 ## Running the tests
 
-This set of code was tested on Rhel 7.5 OS.
-Download the innovacer_code.py and secret.py.
-Edit secret.py by enetering your email-id and password (senders) also your mysql connector password.
+  This set of code was tested on Rhel 7.5 OS.
+  Download the imdb_code.py and secret.py.
+  Edit secret.py by enetering your email-id and password (senders) also your mysql connector password.
 
-After downloading run following command in the same directory where you have downloaded it.
-  #python36 innovacer_code.py
+  After downloading run following command in the same directory where you have downloaded it.
+    #python36 imdb_code.py
 
 ## What is Ansible
 Ansible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.Designed for multi-tier deployments since day one, Ansible models your IT infrastructure by describing how all of your systems inter-relate, rather than just managing one system at a time.It uses no agents and no additional custom security infrastructure, so it's easy to deploy - and most importantly, it uses a very simple language (YAML, in the form of Ansible Playbooks) that allow you to describe your automation jobs in a way that approaches plain English.
@@ -54,36 +54,13 @@ Ansible is a radically simple IT automation engine that automates cloud provisio
     ```
 
 ## Deployment
-1. A database is maintained of all the input email-id and corresponding tv_series.
+1. User input email id and tv series seprated by a comma
+![alt text](https://github.com/ayu-gupta/IMDb-Scrapper/blob/master/input%20prompt.jpg)
 
+2. A database is maintained of all the input email-id and corresponding tv_series.
+![alt text](https://github.com/ayu-gupta/IMDb-Scrapper/blob/master/input_data%20.jpg)
 
-2. Mail is sent through ansible playbook to each user stating satus of each tv-series.
-![alt text](https://github.com/ayu-gupta/IMDb-Scrapper/blob/master/mail%20ss.jpg)
+3. Mail is sent through ansible playbook to each user stating satus of each tv-series.
+![alt text](https://github.com/ayu-gupta/IMDb-Scrapper/blob/master/mail%20output.jpg)
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 

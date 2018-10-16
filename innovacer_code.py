@@ -119,7 +119,7 @@ def mail():
            from: "{{sender_id}}"
            username: "{{sender_id}}"
            password: "{{sender_pwd}}"
-           subject: "Notification for your fav tv series"
+           subject: "Status of your Favourite Tv-Series"
            to: '{{receiver_id}}'
            host: smtp.gmail.com
            port: 587
